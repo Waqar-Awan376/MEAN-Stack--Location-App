@@ -1,0 +1,18 @@
+<nav class="navbar">
+  <div class="logo">
+    <a routerLink="/">
+    <img src="assets/logo.png" alt="LOGO" width="100"/>
+    </a>
+  </div>
+  <ul class="nav-links">
+    <input type="checkbox" id="checkbox_toggle" />
+    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+    <div class="menu">
+      <li><a routerLink="/" routerLinkActive="activeLink" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+      <li><a routerLink="/restaurantList" routerLinkActive="activeLink">Restaurants</a></li>
+      <li><a routerLink="/placesList" routerLinkActive="activeLink">Places</a></li>
+      <li><a routerLink="/addRestaurant" routerLinkActive="activeLink">Add Restaurant</a></li>
+      <li><a routerLink="/addPlace" routerLinkActive="activeLink">Add Place</a></li>
+    </div>
+  </ul>
+</nav>
