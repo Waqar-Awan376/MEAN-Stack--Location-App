@@ -11,6 +11,8 @@ import { AddRestaurantsComponent } from './add-restaurants/add-restaurants.compo
 import { PlacesComponent } from './places/places.component';
 import { AddPlacesComponent } from './add-places/add-places.component';
 import {HttpClientModule} from "@angular/common/http";
+import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
+import { PlaceDetailComponent } from './place-detail/place-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import {HttpClientModule} from "@angular/common/http";
     AddRestaurantsComponent,
     PlacesComponent,
     AddPlacesComponent,
+    RestaurantDetailComponent,
+    PlaceDetailComponent,
   ],
   imports: [
     BrowserModule,

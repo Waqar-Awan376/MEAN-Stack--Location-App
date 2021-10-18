@@ -44,6 +44,15 @@ body
 {
   color: black;
 }
+.color-white
+{
+  color: white;
+}
+.detail-container
+{
+  width: 75%;
+  margin: auto;
+}
 /* ~~~~~~~~~~ PROPERTIES ~~~~~~~~~~*/
 .primary-button
 {

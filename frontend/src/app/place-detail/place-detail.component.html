@@ -1,0 +1,37 @@
+<div class="text-align-center margin-top-20">
+  <a class="secondary-button text-decoration-none color-white" routerLink="/placesList">Go Back</a>
+</div>
+<div class="detail-container">
+  <div class="text-align-center margin-top-80">
+    <img class="image" src="{{'http://localhost:3000/'+this.appService.foundPlace.imageUrl}}">
+  </div>
+  <div class="margin-top-80">
+    <h3>Name: </h3>
+    <p>{{this.appService.foundPlace.name}}</p>
+  </div>
+
+  <div class="margin-top-20">
+    <h3>Phone: </h3>
+    <p>{{this.appService.foundPlace.phoneNumber}}</p>
+  </div>
+
+  <div class="margin-top-20">
+    <h3>Street: </h3>
+    <p>{{this.appService.foundPlace.street}}</p>
+  </div>
+
+  <div class="margin-top-20">
+    <h3>City: </h3>
+    <p>{{this.appService.foundPlace.city}}</p>
+  </div>
+
+  <div class="margin-top-20">
+    <h3>State: </h3>
+    <p>{{this.appService.foundPlace.state}}</p>
+  </div>
+
+  <div class="margin-top-20">
+    <h3>Zip Code: </h3>
+    <p>{{this.appService.foundPlace.zipCode}}</p>
+  </div>
+</div>
