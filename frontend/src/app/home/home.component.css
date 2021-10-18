@@ -1,0 +1,19 @@
+.images-holders
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.image-width
+{
+  width: 400px;
+  margin:20px;
+}
+
+@media screen  and (max-width: 500px){
+  .image-width
+  {
+    width: 200px;
+  }
+}

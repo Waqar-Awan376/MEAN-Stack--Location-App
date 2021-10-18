@@ -8,15 +8,16 @@ import {HttpClient} from "@angular/common/http";
 })
 export class RestaurantsComponent implements OnInit {
   allRestaurants:any;
+  areRestaurantsRendered:boolean=false;
   constructor(private http:HttpClient) { }
 
-  ngOnInit():any {
-    return this.http.get('http://localhost:3000/restaurants/getRestaurants',{
+  ngOnInit():void {
+    this.http.get('http://localhost:3000/restaurants/getRestaurants',{
       responseType:"json"
     }).subscribe((result)=>
     {
-      console.log(result);
       this.allRestaurants=result;
+      this.areRestaurantsRendered=true;
     });
   }
 

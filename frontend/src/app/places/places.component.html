@@ -1,25 +1,25 @@
 <h3 class="text-align-center">Places List</h3>
-<div class="list-container">
-  <div class="list-card">
-    <div class="text-align-center"><img src="/assets/logo.png" alt="IMAGE" width="200"/></div>
+<div class="list-container" *ngIf="arePlacesRendered">
+  <div *ngFor="let place of allPlaces['allPlaces']" class="list-card">
+    <div class="text-align-center"><img src="{{'http://localhost:3000/'+place.imageUrl}}" alt="IMAGE" width="200"/></div>
     <div class="card-detail-container">
       <div>
-        Name: Name of place
+        Name: {{place.name}}
       </div>
       <div>
-        Phone: Phone Number
+        Phone: {{place.phoneNumber}}
       </div>
       <div>
-        Street: Street
+        Street: {{place.street}}
       </div>
       <div>
-        City: City of place
+        City: {{place.city}}
       </div>
       <div>
-        State: state of place
+        State: {{place.state}}
       </div>
       <div>
-        zip: zip of place
+        zip: {{place.zipCode}}
       </div>
     </div>
     <div class="text-align-center margin-top-10">

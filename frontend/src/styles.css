@@ -3,6 +3,7 @@ body
   margin: 0 !important;
   padding:0 !important;
   background-image: url("/assets/tile_background.png");
+  font-family: 'Ubuntu', sans-serif !important;
 }
 :root {
   --light-black: #2c2c2c;
@@ -17,11 +18,31 @@ body
 }
 .margin-top-10
 {
-  margin: 10px;
+  margin-top: 10px;
+}
+.margin-top-80
+{
+  margin-top: 80px;
 }
 .margin-top-20
 {
-  margin: 20px;
+  margin-top: 20px;
+}
+.margin-bottom-10
+{
+  margin-bottom: 10px;
+}
+.margin-bottom-20
+{
+  margin-bottom: 20px;
+}
+.text-decoration-none
+{
+  text-decoration: none;
+}
+.color-black
+{
+  color: black;
 }
 /* ~~~~~~~~~~ PROPERTIES ~~~~~~~~~~*/
 .primary-button

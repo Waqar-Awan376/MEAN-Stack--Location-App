@@ -31,6 +31,5 @@ export class AddRestaurantsComponent implements OnInit {
 
   onFileUpload(event: any) {
     this.imageData=event.target.files[0];
-    console.log(this.imageData);
   }
 }

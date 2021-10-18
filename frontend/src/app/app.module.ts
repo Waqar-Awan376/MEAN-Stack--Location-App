@@ -20,7 +20,7 @@ import {HttpClientModule} from "@angular/common/http";
     RestaurantsComponent,
     AddRestaurantsComponent,
     PlacesComponent,
-    AddPlacesComponent
+    AddPlacesComponent,
   ],
   imports: [
     BrowserModule,

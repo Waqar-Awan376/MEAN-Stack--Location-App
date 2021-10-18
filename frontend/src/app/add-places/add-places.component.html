@@ -13,6 +13,8 @@
   <span class="error-alert" *ngIf="!placeState.valid && placeState.touched">Please enter state name</span>
   <input type="number" class="form-input" placeholder="Zip Code" name="placeZip" ngModel required #placeZip='ngModel'/>
   <span class="error-alert" *ngIf="!placeZip.valid && placeZip.touched">Please enter zip code</span>
+  <input type="file" accept="image/*" class="form-input" name="restaurantImage" ngModel required #restaurantImage='ngModel' (change)="onFileUpload($event)"/>
+  <span class="error-alert" *ngIf="!restaurantImage.valid && restaurantImage.touched">Please upload restaurant Image</span>
 
   <button class="primary-button margin-top-20" type="submit" [disabled]="f.invalid">Add Place</button>
 </div>
