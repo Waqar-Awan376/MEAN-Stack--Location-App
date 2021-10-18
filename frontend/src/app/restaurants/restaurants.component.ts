@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-restaurants',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./restaurants.component.css']
 })
 export class RestaurantsComponent implements OnInit {
+  allRestaurants:any;
+  constructor(private http:HttpClient) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit():any {
+    return this.http.get('http://localhost:3000/restaurants/getRestaurants',{
+      responseType:"json"
+    }).subscribe((result)=>
+    {
+      console.log(result);
+      this.allRestaurants=result;
+    });
   }
 
 }

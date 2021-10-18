@@ -10,6 +10,7 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { AddRestaurantsComponent } from './add-restaurants/add-restaurants.component';
 import { PlacesComponent } from './places/places.component';
 import { AddPlacesComponent } from './add-places/add-places.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AddPlacesComponent } from './add-places/add-places.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

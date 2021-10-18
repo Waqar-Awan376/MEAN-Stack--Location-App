@@ -1,22 +1,22 @@
 <h3 class="text-align-center">Restaurants List</h3>
 <div class="list-container">
-  <div class="list-card">
-    <div class="text-align-center"><img src="/assets/logo.png" alt="IMAGE" width="200"/></div>
+  <div *ngFor="let restaurant of allRestaurants['allRestaurants']" class="list-card">
+    <div class="text-align-center"><img src="{{'http://localhost:3000/'+restaurant.imageUrl}}" alt="IMAGE" width="200"/></div>
     <div class="card-detail-container">
       <div>
-        Name: Name of place
+        Name: {{restaurant.name}}
       </div>
       <div>
-        Phone: Phone Number
+        Phone: {{restaurant.phoneNumber}}
       </div>
       <div>
-        Street: Street
+        Street: {{restaurant.street}}
       </div>
       <div>
-        City: City of place
+        City: {{restaurant.city}}
       </div>
       <div>
-        State: state of place
+        State: {{restaurant.state}}
       </div>
     </div>
     <div class="text-align-center margin-top-10">
