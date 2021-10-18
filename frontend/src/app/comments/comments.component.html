@@ -1,16 +1,17 @@
 <div class="comments-container">
   <h2 class="text-align-center comment-heading">Comments</h2>
-  <form>
+  <form (ngSubmit)="commentHandler(f)" #f="ngForm">
     <div class="insert-comment">
-      <textarea class="text-area-comment" placeholder="Write Comment Here..." rows="5"></textarea>
+      <textarea class="text-area-comment" placeholder="Write Comment Here..." rows="5" name="commentText" ngModel></textarea>
       <div class="text-align-center">
         <button class="primary-button margin-top-20" type="submit" >Comment</button>
       </div>
     </div>
   </form>
-  <div class="margin-top-20 comment-card">
-
-
+  <div *ngIf="areCommentsRendered">
+    <div *ngFor="let comm of allComments['comments']" class="margin-top-20 comment-card">
+      {{comm.comment}}
+    </div>
   </div>
 </div>
 

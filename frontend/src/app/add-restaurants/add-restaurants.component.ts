@@ -9,6 +9,7 @@ import {HttpClient} from "@angular/common/http";
 })
 export class AddRestaurantsComponent implements OnInit {
   imageData:any;
+  restName: any;
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
@@ -24,6 +25,7 @@ export class AddRestaurantsComponent implements OnInit {
     uploadData.append('image',this.imageData);
     this.http.post('http://localhost:3000/restaurants/postRestaurant',uploadData).subscribe((responseData)=>{
       console.log(responseData);
+      formData.reset();
     },error => {
       console.log(error);
     })

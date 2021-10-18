@@ -1,6 +1,6 @@
 const getDb = require('../util/database').getDb;
 
-class Restaurant {
+class Place {
     constructor(name, phoneNumber, street, city, state, zip, imageUrl) {
         this.name = name;
         this.phoneNumber = phoneNumber;
@@ -13,7 +13,7 @@ class Restaurant {
 
     save() {
         const db = getDb();
-        db.collection('places').insertOne(this).then((result) => {
+        return db.collection('places').insertOne(this).then((result) => {
             console.log(result);
         }).catch(err => console.log(err));
     }
@@ -25,4 +25,4 @@ class Restaurant {
     }
 }
 
-module.exports = Restaurant;
+module.exports = Place;

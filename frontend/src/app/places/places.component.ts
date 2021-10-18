@@ -21,6 +21,7 @@ export class PlacesComponent implements OnInit {
     }).subscribe((result)=>
     {
       this.allPlaces=result;
+      console.log(this.allPlaces);
       this.arePlacesRendered=true;
     });
   }

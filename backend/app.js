@@ -32,6 +32,7 @@ const fileFilter = (req, file, cb) => {
 // ~~~~~~~ ROUTES ~~~~~~~//
 const placesRoute = require('./routes/places');
 const restaurantsRoute = require('./routes/restaurants');
+const commentsRoute = require('./routes/comments');
 // ~~~~~~~~~~~~~~~~~~~~~//
 
 // ~~~~~~~ FOLLOWING MIDDLEWARES WILL RUN ON EVERY REQUEST ~~~~~~~//
@@ -49,15 +50,8 @@ app.use((req, res, next) => {
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 app.use('/places', placesRoute);
+app.use('/comments', commentsRoute);
 app.use('/restaurants', restaurantsRoute);
-
-
-app.use((error, req, res, next) => {
-    const status = error.statusCode || 500;
-    const message = error.message;
-    const data = error.data;
-    res.status(status).json({ message: message, data: data });
-});
 
 mongoConnect(() => {
     app.listen(3000);

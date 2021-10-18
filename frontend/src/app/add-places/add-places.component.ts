@@ -25,6 +25,7 @@ export class AddPlacesComponent implements OnInit {
     uploadData.append('image',this.imageData);
     this.http.post('http://localhost:3000/places/postPlace',uploadData).subscribe((responseData)=>{
       console.log(responseData);
+      formData.reset();
     },error => {
       console.log(error);
     })

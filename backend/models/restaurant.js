@@ -12,7 +12,7 @@ class Restaurant {
 
     save() {
         const db = getDb();
-        db.collection('restaurants').insertOne(this).then((result) => {
+        return db.collection('restaurants').insertOne(this).then((result) => {
             console.log(result);
         }).catch(err => console.log(err));
     }
