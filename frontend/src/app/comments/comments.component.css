@@ -1,0 +1,36 @@
+.comments-container
+{
+  width: 75%;
+  margin: auto;
+}
+.comment-heading
+{
+  background-color: var(--light-black);
+  padding: 20px;
+  color: white;
+}
+.comment-card
+{
+  border: 1px solid var(--light-black);
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0.5px var(--light-black);
+  margin: 15px;
+}
+.checked
+{
+  color: gold !important;
+}
+.insert-comment
+{
+  display: flex;
+  flex-direction: column;
+}
+.text-area-comment
+{
+  border-radius: 20px;
+  padding: 10px;
+  outline: none;
+  border:none;
+  box-shadow: 0 0 10px 0.5px var(--light-black);
+}

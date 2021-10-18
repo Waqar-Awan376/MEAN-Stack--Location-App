@@ -13,6 +13,7 @@ import { AddPlacesComponent } from './add-places/add-places.component';
 import {HttpClientModule} from "@angular/common/http";
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 import { PlaceDetailComponent } from './place-detail/place-detail.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { PlaceDetailComponent } from './place-detail/place-detail.component';
     AddPlacesComponent,
     RestaurantDetailComponent,
     PlaceDetailComponent,
+    CommentsComponent,
   ],
   imports: [
     BrowserModule,
