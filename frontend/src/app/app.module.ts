@@ -8,12 +8,14 @@ import {AppRoutingModule} from "./app-routing.module";
 import { HomeComponent } from './home/home.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { AddRestaurantsComponent } from './add-restaurants/add-restaurants.component';
-import { PlacesComponent } from './places/places.component';
-import { AddPlacesComponent } from './add-places/add-places.component';
+import { MuseumsComponent } from './museums/museums.component';
+import { AddMuseumsComponent } from './add-museums/add-museums.component';
 import {HttpClientModule} from "@angular/common/http";
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
-import { PlaceDetailComponent } from './place-detail/place-detail.component';
+import { MuseumDetailComponent } from './museum-detail/museum-detail.component';
 import { CommentsComponent } from './comments/comments.component';
+import { UpdateRestaurantComponent } from './update-restaurant/update-restaurant.component';
+import { UpdateMuseumComponent } from './update-museum/update-museum.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { CommentsComponent } from './comments/comments.component';
     HomeComponent,
     RestaurantsComponent,
     AddRestaurantsComponent,
-    PlacesComponent,
-    AddPlacesComponent,
+    MuseumsComponent,
+    AddMuseumsComponent,
     RestaurantDetailComponent,
-    PlaceDetailComponent,
+    MuseumDetailComponent,
     CommentsComponent,
+    UpdateRestaurantComponent,
+    UpdateMuseumComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,10 +4,10 @@ import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-place-detail',
-  templateUrl: './place-detail.component.html',
-  styleUrls: ['./place-detail.component.css']
+  templateUrl: './museum-detail.component.html',
+  styleUrls: ['./museum-detail.component.css']
 })
-export class PlaceDetailComponent implements OnInit {
+export class MuseumDetailComponent implements OnInit {
 
   constructor(public appService:AppService,private router:Router) { }
 

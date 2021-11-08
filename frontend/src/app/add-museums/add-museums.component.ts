@@ -4,10 +4,10 @@ import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-add-places',
-  templateUrl: './add-places.component.html',
-  styleUrls: ['./add-places.component.css']
+  templateUrl: './add-museums.component.html',
+  styleUrls: ['./add-museums.component.css']
 })
-export class AddPlacesComponent implements OnInit {
+export class AddMuseumsComponent implements OnInit {
   imageData:any;
   constructor(private http:HttpClient) { }
 

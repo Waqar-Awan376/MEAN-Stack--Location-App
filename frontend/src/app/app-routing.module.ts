@@ -3,19 +3,23 @@ import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from "./home/home.component";
 import {RestaurantsComponent} from "./restaurants/restaurants.component";
 import {AddRestaurantsComponent} from "./add-restaurants/add-restaurants.component";
-import {PlacesComponent} from "./places/places.component";
-import {AddPlacesComponent} from "./add-places/add-places.component";
+import {MuseumsComponent} from "./museums/museums.component";
+import {AddMuseumsComponent} from "./add-museums/add-museums.component";
 import {RestaurantDetailComponent} from "./restaurant-detail/restaurant-detail.component";
-import {PlaceDetailComponent} from "./place-detail/place-detail.component";
+import {MuseumDetailComponent} from "./museum-detail/museum-detail.component";
+import {UpdateRestaurantComponent} from "./update-restaurant/update-restaurant.component";
+import {UpdateMuseumComponent} from "./update-museum/update-museum.component";
 
 const appRoutes: Routes = [
   {path:'',component:HomeComponent },
   {path:'restaurantList',component:RestaurantsComponent},
   {path:'addRestaurant',component:AddRestaurantsComponent},
+  {path:'updateRestaurant',component:UpdateRestaurantComponent},
   {path:'restaurantDetail',component:RestaurantDetailComponent},
-  {path:'placesList',component:PlacesComponent},
-  {path:'placeDetail',component:PlaceDetailComponent},
-  {path:'addPlace',component:AddPlacesComponent},
+  {path:'museumList',component:MuseumsComponent},
+  {path:'museumDetail',component:MuseumDetailComponent},
+  {path:'updateMuseum',component:UpdateMuseumComponent},
+  {path:'addMuseum',component:AddMuseumsComponent},
   {path:'**',component:HomeComponent},
 ];
 

@@ -1,0 +1,19 @@
+<h3 class="text-align-center">Update Restaurant Data</h3>
+<form class="form" (ngSubmit)="updateRestaurant(f)" #f='ngForm'>
+  <div class="form-container">
+    <input type="text" class="form-input" placeholder="Name of Restaurant" name="restaurantName" ngModel={{this.appService.foundRestaurant.name}} required #restaurantName='ngModel'/>
+    <span class="error-alert" *ngIf="!restaurantName.valid && restaurantName.touched">Please enter restaurant name</span>
+    <input type="number" class="form-input" placeholder="Phone Number" name="restaurantNumber" ngModel="{{this.appService.foundRestaurant.phoneNumber}}" required #restaurantNumber='ngModel'/>
+    <span class="error-alert" *ngIf="!restaurantNumber.valid && restaurantNumber.touched">Please enter restaurant number</span>
+    <input type="text" class="form-input" placeholder="Street" name="restaurantStreet" ngModel="{{this.appService.foundRestaurant.street}}" required #restaurantStreet='ngModel'/>
+    <span class="error-alert" *ngIf="!restaurantStreet.valid && restaurantStreet.touched">Please enter restaurant Street</span>
+    <input type="text" class="form-input" placeholder="City" name="restaurantCity" ngModel="{{this.appService.foundRestaurant.city}}" required #restaurantCity='ngModel'/>
+    <span class="error-alert" *ngIf="!restaurantCity.valid && restaurantCity.touched">Please enter restaurant City</span>
+    <input type="text" class="form-input" placeholder="State" name="restaurantState" ngModel="{{this.appService.foundRestaurant.state}}" required #restaurantState='ngModel'/>
+    <span class="error-alert" *ngIf="!restaurantState.valid && restaurantState.touched">Please enter restaurant State</span>
+    <input type="file" accept="image/*" class="form-input" name="restaurantImage" ngModel required #restaurantImage='ngModel' (change)="onFileUpload($event)"/>
+    <span class="error-alert" *ngIf="!restaurantImage.valid && restaurantImage.touched">Please upload restaurant Image</span>
+
+    <button class="primary-button margin-top-20" type="submit" [disabled]="f.invalid">Update Restaurant</button>
+  </div>
+</form>

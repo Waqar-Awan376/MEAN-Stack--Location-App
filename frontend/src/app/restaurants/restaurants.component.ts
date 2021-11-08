@@ -28,4 +28,17 @@ export class RestaurantsComponent implements OnInit {
     this.appService.foundRestaurant=this.allRestaurants['allRestaurants'].find((element:any)=>element['_id']===formData.value['restaurant-id']);
     this.router.navigate(['restaurantDetail']);
   }
+
+  updateRestaurant(formData: NgForm) {
+    this.appService.foundRestaurant=this.allRestaurants['allRestaurants'].find((element:any)=>element['_id']===formData.value['restaurant-id']);
+    this.router.navigate(['updateRestaurant']);
+  }
+
+  deleteRestaurant(formData: NgForm) {
+    this.http.get('http://localhost:3000/restaurants/deleteRestaurant/'+formData.value['restaurant-id']).subscribe((result)=>{
+      this.ngOnInit();
+      this.router.navigate(['restaurantList']);
+    })
+
+  }
 }

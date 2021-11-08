@@ -1,4 +1,4 @@
-<h3 class="text-align-center">Add New Place</h3>
+<h3 class="text-align-center">Add New Museum</h3>
 <form class="form" (ngSubmit)="addPlaceHandler(f)" #f='ngForm'>
 <div class="form-container">
   <input type="text" class="form-input" placeholder="Name of Place" name="placeName" ngModel required #placeName='ngModel'/>
@@ -14,9 +14,9 @@
   <input type="number" class="form-input" placeholder="Zip Code" name="placeZip" ngModel required #placeZip='ngModel'/>
   <span class="error-alert" *ngIf="!placeZip.valid && placeZip.touched">Please enter zip code</span>
   <input type="file" accept="image/*" class="form-input" name="restaurantImage" ngModel required #restaurantImage='ngModel' (change)="onFileUpload($event)"/>
-  <span class="error-alert" *ngIf="!restaurantImage.valid && restaurantImage.touched">Please upload restaurant Image</span>
+  <span class="error-alert" *ngIf="!restaurantImage.valid && restaurantImage.touched">Please upload Museum Image</span>
 
-  <button class="primary-button margin-top-20" type="submit" [disabled]="f.invalid">Add Place</button>
+  <button class="primary-button margin-top-20" type="submit" [disabled]="f.invalid">Add Museum</button>
 </div>
 </form>
 

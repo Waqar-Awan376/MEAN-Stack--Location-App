@@ -28,5 +28,19 @@
         <button class="secondary-button" type="submit"><a class="text-decoration-none color-white">Show Details</a></button>
       </form>
     </div>
+
+    <div class="text-align-center margin-top-20">
+      <form (ngSubmit)="updateRestaurant(f)" #f='ngForm'>
+        <input type="hidden" value="{{restaurant._id}}" name="restaurant-id" ngModel="{{restaurant._id}}"/>
+        <button class="secondary-button" type="submit"><a class="text-decoration-none color-white">Update</a></button>
+      </form>
+    </div>
+
+    <div class="text-align-center margin-top-20">
+      <form (ngSubmit)="deleteRestaurant(f)" #f='ngForm'>
+        <input type="hidden" value="{{restaurant._id}}" name="restaurant-id" ngModel="{{restaurant._id}}"/>
+        <button class="secondary-button" type="submit"><a class="text-decoration-none color-white">Delete</a></button>
+      </form>
+    </div>
   </div>
 </div>

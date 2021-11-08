@@ -1,0 +1,23 @@
+<h3 class="text-align-center">Add New Museum</h3>
+<form class="form" (ngSubmit)="updateMuseumHandler(f)" #f='ngForm'>
+  <div class="form-container">
+    <input type="text" class="form-input" placeholder="Name of Place" name="placeName" ngModel={{this.appService.foundPlace.name}} required #placeName='ngModel'/>
+    <span class="error-alert" *ngIf="!placeName.valid && placeName.touched">Please enter place name</span>
+    <input type="number" class="form-input" placeholder="Phone Number" name="placeNumber" ngModel={{this.appService.foundPlace.phoneNumber}} required #placeNumber='ngModel'/>
+    <span class="error-alert" *ngIf="!placeNumber.valid && placeNumber.touched">Please enter place number</span>
+    <input type="text" class="form-input" placeholder="Street" name="placeStreet" ngModel={{this.appService.foundPlace.street}} required #placeStreet='ngModel'/>
+    <span class="error-alert" *ngIf="!placeStreet.valid && placeStreet.touched">Please enter street name</span>
+    <input type="text" class="form-input" placeholder="City" name="placeCity" ngModel={{this.appService.foundPlace.city}} required #placeCity='ngModel'/>
+    <span class="error-alert" *ngIf="!placeCity.valid && placeCity.touched">Please enter city name</span>
+    <input type="text" class="form-input" placeholder="State" name="placeState" ngModel={{this.appService.foundPlace.state}} required #placeState='ngModel'/>
+    <span class="error-alert" *ngIf="!placeState.valid && placeState.touched">Please enter state name</span>
+    <input type="number" class="form-input" placeholder="Zip Code" name="placeZip" ngModel={{this.appService.foundPlace.zipCode}} required #placeZip='ngModel'/>
+    <span class="error-alert" *ngIf="!placeZip.valid && placeZip.touched">Please enter zip code</span>
+    <input type="file" accept="image/*" class="form-input" name="restaurantImage" ngModel required #restaurantImage='ngModel' (change)="onFileUpload($event)"/>
+    <span class="error-alert" *ngIf="!restaurantImage.valid && restaurantImage.touched">Please upload Museum Image</span>
+
+    <button class="primary-button margin-top-20" type="submit" [disabled]="f.invalid">Add Museum</button>
+  </div>
+</form>
+
+

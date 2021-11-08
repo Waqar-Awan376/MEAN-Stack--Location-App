@@ -6,10 +6,10 @@ import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-places',
-  templateUrl: './places.component.html',
-  styleUrls: ['./places.component.css']
+  templateUrl: './museums.component.html',
+  styleUrls: ['./museums.component.css']
 })
-export class PlacesComponent implements OnInit {
+export class MuseumsComponent implements OnInit {
   allPlaces:any;
   arePlacesRendered:boolean=false;
 
@@ -28,6 +28,18 @@ export class PlacesComponent implements OnInit {
 
   showDetail(formData: NgForm) {
     this.appService.foundPlace=this.allPlaces['allPlaces'].find((element:any)=>element['_id']===formData.value['place-id']);
-    this.router.navigate(['placeDetail']);
+    this.router.navigate(['museumDetail']);
+  }
+
+  updateMuseum(formData: NgForm) {
+    this.appService.foundPlace=this.allPlaces['allPlaces'].find((element:any)=>element['_id']===formData.value['place-id']);
+    this.router.navigate(['updateMuseum']);
+  }
+
+  deleteMuseum(formData: NgForm) {
+    this.http.get('http://localhost:3000/places/deletePlace/'+formData.value['place-id']).subscribe((result)=>{
+      this.ngOnInit();
+      this.router.navigate(['museumList']);
+    })
   }
 }
