@@ -25,3 +25,23 @@ exports.getPlaces = (req, res, next) => {
         console.log(err);
     });
 }
+exports.deletePlace = (req, res, next) => {
+    const placeId = req.params.id;
+    Place.deleteById(placeId).then(() => {
+        res.status(200).json({
+            status: true,
+            message: "Successfully deleted Museum"
+        })
+    }).catch(err => console.log(err));
+}
+exports.updatePlace = (req, res, next) => {
+    const placeId = req.params.id;
+    let imageurl = req.file.path;
+    const newPlace = new Place(req.body.name, req.body.phoneNumber, req.body.street, req.body.city, req.body.state, req.body.zipCode, imageurl, placeId);
+    newPlace.save().then((result) => {
+        res.status(200).json({
+            status: true,
+            message: "Successfully updated Place"
+        })
+    }).catch(err => console.log(err));
+}
